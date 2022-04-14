@@ -33,7 +33,7 @@
   position: relative;
   display: block;
   width: 3rem;
-  height: 0.2rem;
+  height: .2rem;
   top: 2.9rem;
   left: 1.5rem;
   transition: 0.5s ease-in-out;
@@ -109,7 +109,4 @@
     margin: 1rem 0 ;
   }
 
-  .header nav label{
-
-  }
 }
