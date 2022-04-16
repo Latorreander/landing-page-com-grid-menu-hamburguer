@@ -206,26 +206,25 @@ html {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.project img{
+.project img {
   width: 100%;
   height: 100%;
 }
 
-.project a:hover img{
+.project a:hover img {
   opacity: 0.7;
   transition: 0.4s;
 }
 
-
-@media (max-width: 769px){
-  .projects{
+@media (max-width: 769px) {
+  .projects {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 }
 
-@media (max-width: 425px){
-  .projects{
+@media (max-width: 425px) {
+  .projects {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
