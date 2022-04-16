@@ -22,110 +22,7 @@ html {
   grid-area: header;
 }
 
-.header h1:hover {
-  transition: 0.3s ease-in-out;
-  color: #FF926A;
-}
-
-.hero {
-  grid-area: hero;
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url('images/lemons.jpg') center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero::after{
-  content: url('images/seta_preta.png');
-  position: absolute;
-  height: 35px;
-  bottom: 40px;
-  animation: arow 0.6s infinite alternate ease-in-out;
-}
-
-@-webkit-keyframes arow{
-    0%{-webkit-transform: translateY(0); opacity: 0.4;} 
-    100% {-webkit-transform: translateY(0.4em); opacity: 1;}
-}
-
-.hero h2{
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 4rem;
-}
-
-.about {
-  grid-area: about;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #fff;
-}
-
-.about .imagem{
-  width: 100%;
-  height: 100%;
-}
-
-.about .imagem.direita{
-  background: url('images/bridge.jpg') center center no-repeat;
-  background-size: cover;
-}
-
-.about .imagem.esquerda{
-  background: url('images/sky.jpg');
-  background-size: cover;
-}
-
-.about .texto{
-  padding: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  
-}
-
-.about .texto h3{
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-.about .texto p{
-  font-size: 1.8rem;
-  
-  margin: 30px 0 ;
-}
-
-.about .texto .btn-know-more{
-  font-size: 1.6rem;
-  align-self: flex-start;
-
-} 
-
-.about .texto .btn-know-more:hover{
-  font-weight: 700;
-}
-
-.services {
-  background-color: burlywood;
-  grid-area: services;
-}
-
-.projects {
-  background-color: cadetblue;
-  grid-area: projects;
-}
-
-.footer {
-  background-color: chartreuse;
-  grid-area: footer;
-}
-
- .header .header-container {
+.header .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,8 +35,50 @@ html {
   font-weight: 700;
 }
 
-@media(max-width: 450px){
-  .hero h2{
+.header h1:hover {
+  transition: 0.3s ease-in-out;
+  color: #ff926a;
+}
+
+.hero {
+  grid-area: hero;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("images/lemons.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: url("images/seta_preta.png");
+  position: absolute;
+  height: 35px;
+  bottom: 40px;
+  animation: arow 0.6s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes arow {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(0.4em);
+    opacity: 1;
+  }
+}
+
+.hero h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+@media (max-width: 450px) {
+  .hero h2 {
     font-size: 2.5rem;
   }
 
@@ -148,22 +87,126 @@ html {
   }
 }
 
+.about {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  max-width: var(--max-width-size);
+  margin: 0 auto;
+}
 
+.about .imagem {
+  width: 100%;
+  height: 100%;
+}
 
+.about .imagem.direita {
+  background: url("images/bridge.jpg") center center no-repeat;
+  background-size: cover;
+}
 
+.about .imagem.esquerda {
+  background: url("images/sky.jpg");
+  background-size: cover;
+}
 
+.about .texto {
+  padding: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 
+.about .texto h3 {
+  font-size: 4rem;
+  font-weight: 700;
+}
 
+.about .texto p {
+  font-size: 1.8rem;
 
+  margin: 30px 0;
+}
 
+.about .texto .btn-know-more {
+  font-size: 1.6rem;
+  align-self: flex-start;
+}
 
-   
+.about .texto .btn-know-more:hover {
+  font-weight: 700;
+}
 
+@media (max-width: 426px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
 
+  .about .texto {
+    text-align: center;
+  }
 
+  .about .texto .btn-know-more {
+    align-self: center;
+  }
+}
 
+.services {
+  grid-area: services;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.services .service {
+  padding: 70px 20px;
+  text-align: center;
+}
 
+.services .service img {
+  width: 250px;
+  margin-bottom: 30px;
+}
 
+.services .service h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
+.services .service p {
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 400px;
+  margin: 20px auto 0;
+  line-height: 25px;
+}
 
+.services .service:nth-child(1) {
+  background-color: lightskyblue;
+}
+
+.services .service:nth-child(2) {
+  background-color: lightpink;
+}
+
+@media (max-width: 426px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .services .service p {
+    padding: 0 20px;
+  }
+}
+
+.projects {
+  background-color: cadetblue;
+  grid-area: projects;
+}
+
+.footer {
+  background-color: chartreuse;
+  grid-area: footer;
+}
